@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TB_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TB_consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TB_provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TB_provider/TB_mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TB_provider/TB_pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TB_provider/TB_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TB_provider/TB_service_impl" charset="UTF-8" />
+  </component>
+</project>

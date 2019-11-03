@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bjsxt.tb.mapper.TbReplyMapper" >
+  <insert id="addReply" parameterType="com.bjsxt.tb.pojo.Reply">
+    insert into t_reply values(default,#{topic_id},#{author},#{content},#{create_date})
+  </insert>
+</mapper>
