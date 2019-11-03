@@ -26,7 +26,7 @@
 
   <!--根据ID查询指定帖子信息-->
   <select id="findById" parameterType="int" resultMap="topicMapper">
-      select tp.*,rp.reply_id,rp.author as r_author,rp.content as r_content,rp.create_date as r_date from t_topic tp ,t_reply rp where tp.topic_id = rp.topic_id and tp.topic_id=#{id} order by rp.create_date desc
+     select tp.*,rp.reply_id,rp.author AS r_author,rp.content AS r_content,rp.create_date AS r_date from T_TOPIC tp left join t_reply rp on tp.topic_id = rp.topic_id where tp.topic_id=#{id} order by rp.create_date desc
   </select>
 
   <!--添加帖子-->

@@ -30,12 +30,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				var name = $("#name").val();
 				var message = $("#message").val();
 				var topic_id = $("#topic_id").val();
+				var click_amount = $("#click_amount").val();
 				//发起一个ajax请求，完成添加评论的操作
 				/* alert(name+"--"+message+"--"+topic_id); */
 				$.ajax({
 					url:"/addReply",
 	 				type:"post",
-	 				data:{name:name,message:message,topic_id:topic_id},
+	 				data:{name:name,message:message,topic_id:topic_id,click_amount:click_amount},
 	 				dataType:"text",
 	 				success:function(data){
 	 					if(data=="success"){
@@ -100,6 +101,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div>
      <center>
      	<input type="hidden" name="topic_id" id="topic_id" value="${topic.topic_id}"/>
+		 <input type="hidden" name="click_amount" id="click_amount" value="${topic.click_amount}">
    	   	<label>昵称：</label>
     	 <input type="text" name="name" id="name" /><br /><br />
     	 <label>评论：</label>

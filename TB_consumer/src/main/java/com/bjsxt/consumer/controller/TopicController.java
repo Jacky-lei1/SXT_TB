@@ -47,16 +47,15 @@ public class TopicController {
     public String showDetails(HttpServletRequest req){
         //获得请求数据
         int id = Integer.parseInt(req.getParameter("topic_id"));
+        System.out.println("根据id查询帖子的id："+id);
         int clickNum = Integer.parseInt(req.getParameter("click_amount"));
+        managerTopicService.update(++clickNum,id);
+
         //调用业务层查询所有信息
         Topic topic = managerTopicService.showDetails(id);
-
-        System.out.println(topic);
-
         req.setAttribute("topic",topic);
         req.setAttribute("topic_id", id);
-        req.setAttribute("clickNum", ++clickNum);
-        update(req);//更新数据库中对应帖子的点击数
+
         return "details";
     }
 
@@ -85,18 +84,18 @@ public class TopicController {
         return "addList";
     }
 
-    /**
+   /* *//**
      * 更新帖子点击数
      * @param req
-     */
+     *//*
 
-    public void update(HttpServletRequest req){
+    public synchronized void update(HttpServletRequest req){
         //获取请求信息
         int clickNum =  (int) req.getAttribute("clickNum");
         System.out.println("update中的点击数："+clickNum);
         int topic_id = (int) req.getAttribute("topic_id");
         managerTopicService.update(clickNum, topic_id);
-    }
+    }*/
 
 
 }
